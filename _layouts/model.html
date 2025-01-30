@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="model-detail">
+<article class="model-page">
   <!-- Model Header -->
   <header class="model-header">
     <h1 class="model-title">{{ page.title }}</h1>
@@ -13,42 +13,57 @@ layout: default
 
   <!-- Model Gallery -->
   <div class="model-gallery">
-    {% for image in page.images %}
+    <div class="gallery-main">
       <img 
-        src="{{ image | relative_url }}" 
-        alt="{{ page.title }} - Image {{ forloop.index }}" 
+        src="{{ page.images[0] | relative_url }}" 
+        alt="{{ page.title }} - Main Image" 
+        id="main-image"
         loading="lazy"
       >
-    {% endfor %}
-  </div>
-
-  <!-- Model Details -->
-  <div class="model-specs">
-    <h2>Details</h2>
-    <div class="specs-grid">
-      <div class="spec-item">
-        <h3>Category</h3>
-        <p>{{ page.category }}</p>
-      </div>
-      <div class="spec-item">
-        <h3>Software</h3>
-        <p>{{ page.software | join: ", " }}</p>
-      </div>
-      <div class="spec-item">
-        <h3>Polycount</h3>
-        <p>{{ page.polycount }}</p>
-      </div>
-      <div class="spec-item">
-        <h3>Textures</h3>
-        <p>{{ page.textures }}</p>
-      </div>
+    </div>
+    <div class="gallery-thumbnails">
+      {% for image in page.images %}
+        <img 
+          src="{{ image | relative_url }}" 
+          alt="{{ page.title }} - Thumbnail {{ forloop.index }}" 
+          class="thumbnail"
+          loading="lazy"
+        >
+      {% endfor %}
     </div>
   </div>
 
-  <!-- Model Description -->
-  <div class="model-description">
-    <h2>Overview</h2>
-    {{ content }}
+  <!-- Model Details -->
+  <div class="model-details">
+    <div class="details-section">
+      <h2>Details</h2>
+      <div class="details-grid">
+        <div class="detail-item">
+          <h3>Category</h3>
+          <p>{{ page.category }}</p>
+        </div>
+        <div class="detail-item">
+          <h3>Software</h3>
+          <p>{{ page.software | join: ", " }}</p>
+        </div>
+        <div class="detail-item">
+          <h3>Polycount</h3>
+          <p>{{ page.polycount }}</p>
+        </div>
+        <div class="detail-item">
+          <h3>Textures</h3>
+          <p>{{ page.textures }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Model Description -->
+    <div class="description-section">
+      <h2>Overview</h2>
+      <div class="description-content">
+        {{ content }}
+      </div>
+    </div>
   </div>
 
   <!-- Back to Portfolio -->
