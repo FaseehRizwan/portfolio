@@ -919,13 +919,14 @@ body[data-theme="light"] {
 }
 
 
-/* Model Detail Page */
-.model-detail {
+/* Model Page */
+.model-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
+/* Model Header */
 .model-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -947,77 +948,106 @@ body[data-theme="light"] {
 
 /* Model Gallery */
 .model-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
-.model-gallery img {
+.gallery-main {
+  margin-bottom: 1rem;
+}
+
+.gallery-main img {
   width: 100%;
-  height: 250px;
+  height: 400px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 16px;
   transition: transform 0.3s ease;
 }
 
-.model-gallery img:hover {
-  transform: scale(1.05);
+.gallery-thumbnails {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
 }
 
-/* Model Specs */
-.model-specs {
+.gallery-thumbnails img {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-thumbnails img:hover {
+  transform: scale(1.1);
+}
+
+/* Model Details */
+.model-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.details-section {
   background: rgba(32, 32, 64, 0.3);
   padding: 1.5rem;
   border-radius: 16px;
-  margin-bottom: 2rem;
 }
 
-.model-specs h2 {
+.details-section h2 {
   font-size: 1.8rem;
   color: var(--accent-2);
   margin-bottom: 1.5rem;
 }
 
-.specs-grid {
+.details-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
 }
 
-.spec-item {
+.detail-item {
   background: rgba(10, 10, 18, 0.5);
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
 }
 
-.spec-item h3 {
+.detail-item h3 {
   font-size: 1.2rem;
   color: var(--accent-2);
   margin-bottom: 0.5rem;
 }
 
-.spec-item p {
+.detail-item p {
   font-size: 0.9rem;
   color: rgba(224, 224, 255, 0.8);
 }
 
 /* Model Description */
-.model-description {
-  margin-bottom: 2rem;
+.description-section {
+  background: rgba(32, 32, 64, 0.3);
+  padding: 1.5rem;
+  border-radius: 16px;
 }
 
-.model-description h2 {
+.description-section h2 {
   font-size: 1.8rem;
   color: var(--accent-2);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.model-description p {
+.description-content {
   font-size: 1rem;
   line-height: 1.6;
   color: rgba(224, 224, 255, 0.9);
+}
+
+.description-content p {
+  margin-bottom: 1.5rem;
 }
 
 /* Back to Portfolio */
