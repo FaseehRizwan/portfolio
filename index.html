@@ -7,12 +7,12 @@ title: Home
   <div class="hero-content">
     <h1>3D Model Artist & Game Developer</h1>
     <p>Creating immersive assets for games, architecture, and film</p>
+    <a href="#featured" class="btn">View Portfolio</a>
   </div>
-  <div class="animated-bg"></div>
 </section>
 
-<!-- Featured Models Grid -->
-<section class="featured-models">
+<!-- Featured Models -->
+<section id="featured" class="featured-models">
   <h2>Featured Work</h2>
   <div class="model-grid">
     {% for model in site.models limit:4 %}
@@ -31,27 +31,8 @@ title: Home
   </div>
 </section>
 
-<!-- Skills Section -->
-<section class="skills">
-  <h2>Technical Skills</h2>
-  <div class="skill-container">
-    <div class="skill-item">
-      <span class="skill-name">Blender</span>
-      <div class="skill-bar" data-percent="90%"></div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-name">ZBrush</span>
-      <div class="skill-bar" data-percent="85%"></div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-name">Unity</span>
-      <div class="skill-bar" data-percent="75%"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Game Dev Teaser -->
-<section class="game-dev">
-  <h2>Game Development</h2>
-  <p>Expanding into real-time 3D environments. <a href="#">Learn more →</a></p>
+<!-- Call to Action -->
+<section class="cta">
+  <h2>Ready to Collaborate?</h2>
+  <a href="{{ '/contact/' | relative_url }}" class="btn">Get in Touch</a>
 </section>
