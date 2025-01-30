@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.setAttribute('data-theme', savedTheme);
   }
 });
+
 // Filter Models
 document.querySelectorAll('.filters button').forEach(button => {
   button.addEventListener('click', () => {
