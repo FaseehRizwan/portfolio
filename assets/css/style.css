@@ -12,30 +12,26 @@
   --card-bg-light: rgba(255, 255, 255, 0.9);
 }
 
-/* ===== Light Theme Overrides ===== */
+/* ===== Modern Light Theme ===== */
 [data-theme="light"] {
   /* Base Colors */
-  --bg-dark: #f8f9fa;
-  --text-dark: #2d3436;
-  --accent-1: #6c5ce7;
-  --accent-2: #00b894;
+  --bg-dark: #ffffff; /* Pure white */
+  --text-dark: #1a1a1a; /* Near-black for max contrast */
+  --accent-1: #7b61ff; /* Same purple as dark mode */
+  --accent-2: #00d1b2; /* Brighter teal */
   --accent-gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  
+
   /* Cards & Sections */
-  --card-bg: rgba(255, 255, 255, 0.9);
-  --card-border: rgba(0, 0, 0, 0.05);
-  
-  /* Text Contrast */
-  --text-muted: rgba(45, 52, 54, 0.7);
+  --card-bg: #ffffff; /* Solid white */
+  --card-border: rgba(123, 97, 255, 0.1); /* Purple-tinted border */
 }
 
-/* Global Light Mode Styles */
+/* Typography */
 [data-theme="light"] body {
   background: var(--bg-dark);
   color: var(--text-dark);
 }
 
-/* Typography */
 [data-theme="light"] h1,
 [data-theme="light"] h2,
 [data-theme="light"] h3 {
@@ -44,7 +40,7 @@
 
 [data-theme="light"] .model-category,
 [data-theme="light"] .post-category {
-  background: rgba(108, 92, 231, 0.1);
+  background: rgba(123, 97, 255, 0.1); /* Purple accent */
   color: var(--accent-1);
 }
 
@@ -55,7 +51,7 @@
 [data-theme="light"] .contact-form-container {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(123, 97, 255, 0.08); /* Purple-tinted shadow */
 }
 
 /* Buttons */
@@ -77,7 +73,8 @@
 
 /* Navigation */
 [data-theme="light"] .cyber-nav {
-  background: rgba(248, 249, 250, 0.95);
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--card-border);
 }
 
@@ -89,11 +86,10 @@
   color: var(--accent-1);
 }
 
-/* Footer (Remains Dark as Requested) */
+/* Footer (Remains Dark) */
 [data-theme="light"] .site-footer {
-  background: rgba(10, 10, 18, 0.95);
+  background: rgba(10, 10, 18, 0.95); /* Unchanged */
 }
-
   
   /* Colors */
   --bg-dark: #0a0a12;
