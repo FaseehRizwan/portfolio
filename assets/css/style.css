@@ -248,3 +248,31 @@ p {
     padding: 0 1rem;
   }
 }
+/* Glow Animation for Cards */
+.model-card::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--accent-gradient);
+  z-index: -1;
+  border-radius: 18px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.model-card:hover::after {
+  opacity: 0.3;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.featured-models, .skills, .game-dev {
+  animation: fadeIn 1s ease-out;
+}
