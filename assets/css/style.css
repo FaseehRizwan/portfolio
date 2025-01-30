@@ -15,12 +15,11 @@
 /* Light Mode Specific Styles */
 [data-theme="light"] {
   /* Light Mode Colors */
-  --bg-dark: #ffffff; /* Pure white background */
-  --text-dark: #2d3436; /* Dark gray for text */
-  --accent-1: #6c5ce7; /* Purple accent */
-  --accent-2: #00b894; /* Teal accent */
-  --card-bg-dark: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
-  --card-bg-light: rgba(245, 245, 245, 0.9); /* Light gray for cards */
+  --bg-dark: #f8f9fa; /* Soft white background */
+  --text-dark: #2d3436; /* Dark blue-gray for text */
+  --accent-1: #e67e22; /* Deep orange accent */
+  --accent-2: #2ecc71; /* Emerald green accent */
+  --card-bg-dark: #ecf0f1; /* Light gray for cards */
   --border-light: rgba(0, 0, 0, 0.1); /* Subtle border for contrast */
 }
 
@@ -33,7 +32,7 @@
 [data-theme="light"] .details-section h2,
 [data-theme="light"] .description-section h2,
 [data-theme="light"] .model-category {
-  color: var(--accent-1); /* Purple for headings */
+  color: var(--accent-1); /* Deep orange for headings */
 }
 
 [data-theme="light"] .model-meta,
@@ -41,7 +40,7 @@
 [data-theme="light"] .description-content,
 [data-theme="light"] .post-meta,
 [data-theme="light"] .post-content {
-  color: var(--text-dark); /* Dark gray for body text */
+  color: var(--text-dark); /* Dark blue-gray for body text */
 }
 
 [data-theme="light"] .details-section,
@@ -50,12 +49,12 @@
 [data-theme="light"] .blog-post,
 [data-theme="light"] .contact-form-container,
 [data-theme="light"] .contact-info {
-  background: var(--card-bg-light);
+  background: var(--card-bg-dark);
   border: 1px solid var(--border-light);
 }
 
 [data-theme="light"] .btn-primary {
-  background: var(--accent-gradient);
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
   color: white;
 }
 
@@ -88,19 +87,24 @@
   color: var(--accent-1);
 }
 
+/* Footer remains unchanged */
+[data-theme="light"] .site-footer {
+  background: rgba(10, 10, 18, 0.95); /* Keep footer dark */
+  backdrop-filter: blur(8px);
+}
+
 [data-theme="light"] .footer-container {
-  background: var(--card-bg-light);
-  border-top: 1px solid var(--border-light);
+  background: transparent; /* Keep footer dark */
+  border-top: none; /* Remove border if any */
 }
 
 [data-theme="light"] .social-link {
-  color: var(--accent-1);
+  color: var(--text-dark); /* Keep footer icons dark */
 }
 
 [data-theme="light"] .social-link:hover {
-  color: var(--accent-2);
+  color: var(--accent-1); /* Keep footer icons dark */
 }
-
 
 
   
