@@ -16,3 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// Filter Models
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const modelCards = document.querySelectorAll('.model-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active class to clicked button
+      button.classList.add('active');
+
+      // Filter models
+      const category = button.dataset.filter;
+      modelCards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
