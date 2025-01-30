@@ -1,16 +1,58 @@
 ---
 layout: default
 ---
-<div class="model-detail">
-  <h1>{{ page.title }}</h1>
-  <div class="gallery">
-    {% for img in page.images %}
-      <img src="{{ img | relative_url }}" loading="lazy">
+<article class="model-detail">
+  <!-- Model Header -->
+  <header class="model-header">
+    <h1 class="model-title">{{ page.title }}</h1>
+    <div class="model-meta">
+      <span class="model-category">{{ page.category }}</span>
+      <span class="model-date">{{ page.date | date: "%b %d, %Y" }}</span>
+    </div>
+  </header>
+
+  <!-- Model Gallery -->
+  <div class="model-gallery">
+    {% for image in page.images %}
+      <img 
+        src="{{ image | relative_url }}" 
+        alt="{{ page.title }} - Image {{ forloop.index }}" 
+        loading="lazy"
+      >
     {% endfor %}
   </div>
-  <div class="specs">
-    <p>Software: {{ page.software | join: ", " }}</p>
-    <p>Polycount: {{ page.polycount }}</p>
+
+  <!-- Model Details -->
+  <div class="model-specs">
+    <h2>Details</h2>
+    <div class="specs-grid">
+      <div class="spec-item">
+        <h3>Category</h3>
+        <p>{{ page.category }}</p>
+      </div>
+      <div class="spec-item">
+        <h3>Software</h3>
+        <p>{{ page.software | join: ", " }}</p>
+      </div>
+      <div class="spec-item">
+        <h3>Polycount</h3>
+        <p>{{ page.polycount }}</p>
+      </div>
+      <div class="spec-item">
+        <h3>Textures</h3>
+        <p>{{ page.textures }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Model Description -->
+  <div class="model-description">
+    <h2>Overview</h2>
     {{ content }}
   </div>
-</div>
+
+  <!-- Back to Portfolio -->
+  <div class="back-to-portfolio">
+    <a href="{{ '/models/' | relative_url }}" class="btn btn-primary">Back to Portfolio</a>
+  </div>
+</article>
