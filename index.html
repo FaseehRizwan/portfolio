@@ -1,0 +1,57 @@
+---
+layout: default
+title: Home
+---
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>3D Model Artist & Game Developer</h1>
+    <p>Creating immersive assets for games, architecture, and film</p>
+  </div>
+  <div class="animated-bg"></div>
+</section>
+
+<!-- Featured Models Grid -->
+<section class="featured-models">
+  <h2>Featured Work</h2>
+  <div class="model-grid">
+    {% for model in site.models limit:4 %}
+      <a href="{{ model.url | relative_url }}" class="model-card">
+        <img 
+          src="{{ model.images[0] | relative_url }}" 
+          alt="{{ model.title }}" 
+          loading="lazy"
+        >
+        <div class="model-info">
+          <h3>{{ model.title }}</h3>
+          <span class="model-category">{{ model.category }}</span>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills">
+  <h2>Technical Skills</h2>
+  <div class="skill-container">
+    <div class="skill-item">
+      <span class="skill-name">Blender</span>
+      <div class="skill-bar" data-percent="90%"></div>
+    </div>
+    <div class="skill-item">
+      <span class="skill-name">ZBrush</span>
+      <div class="skill-bar" data-percent="85%"></div>
+    </div>
+    <div class="skill-item">
+      <span class="skill-name">Unity</span>
+      <div class="skill-bar" data-percent="75%"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Game Dev Teaser -->
+<section class="game-dev">
+  <h2>Game Development</h2>
+  <p>Expanding into real-time 3D environments. <a href="#">Learn more →</a></p>
+</section>
