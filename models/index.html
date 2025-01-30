@@ -1,18 +1,32 @@
 ---
 layout: default
-title: Models
+title: Portfolio
 ---
+<div class="portfolio-header">
+  <h1>Portfolio</h1>
+  <div class="filters">
+    <button data-filter="all">All</button>
+    <button data-filter="props">Props</button>
+    <button data-filter="weapons">Weapons</button>
+    <button data-filter="characters">Characters</button>
+    <button data-filter="vehicles">Vehicles</button>
+    <button data-filter="environments">Environments</button>
+  </div>
+</div>
+
 <div class="model-grid">
   {% for model in site.models %}
-    <div class="model-card">
+    <div class="model-card" data-category="{{ model.category }}">
       <a href="{{ model.url | relative_url }}">
         <img 
           src="{{ model.images[0] | relative_url }}" 
           alt="{{ model.title }}" 
           loading="lazy"
         >
-        <h3>{{ model.title }}</h3>
-        <p>{{ model.category | capitalize }}</p>
+        <div class="model-info">
+          <h3>{{ model.title }}</h3>
+          <span class="model-category">{{ model.category }}</span>
+        </div>
       </a>
     </div>
   {% endfor %}
