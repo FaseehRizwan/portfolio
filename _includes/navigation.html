@@ -1,18 +1,22 @@
-<nav>
-    <a href="{{ '/' | relative_url }}">Home</a>
-    <a href="{{ '/models/' | relative_url }}">Models</a>
-    <a href="{{ '/blog/' | relative_url }}">Blog</a>
-    <a href="{{ '/about/' | relative_url }}">About</a>
-    <a href="{{ '/contact/' | relative_url }}">Contact</a>
-    <button id="theme-toggle">🌓</button>
-  </nav>
-  <nav class="cyber-nav">
+<nav class="cyber-nav">
   <div class="nav-container">
-    <a href="{{ '/' | relative_url }}" class="nav-link">
-      <span class="nav-icon">⌂</span>
-      <span class="nav-text">Home</span>
+    <!-- Logo -->
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+      <span class="logo-text">YourPortfolio</span>
     </a>
-    <!-- Repeat for other links -->
-    <div class="nav-highlight"></div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links">
+      <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+      <a href="{{ '/models/' | relative_url }}" class="nav-link">Portfolio</a>
+      <a href="{{ '/blog/' | relative_url }}" class="nav-link">Blog</a>
+      <a href="{{ '/about/' | relative_url }}" class="nav-link">About</a>
+      <a href="{{ '/contact/' | relative_url }}" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle">
+      <span class="theme-icon">🌓</span>
+    </button>
   </div>
 </nav>
