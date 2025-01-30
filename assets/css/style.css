@@ -12,21 +12,22 @@
   --card-bg-light: rgba(255, 255, 255, 0.9);
 }
 
-/* ===== Radical Light Theme ===== */
+/* ===== RADICALLY NEW LIGHT THEME ===== */
 [data-theme="light"] {
   /* Base Colors */
-  --bg-dark: #f5f6fa;
-  --text-dark: #1a1a2c;
-  --accent-1: #6c5ce7;
+  --bg-dark: #fafafa;
+  --text-dark: #2d3436;
+  --accent-1: #0984e3;
   --accent-2: #ff7675;
-  --accent-gradient: linear-gradient(135deg, #6c5ce7, #a66efa);
+  --accent-gradient: linear-gradient(135deg, #0984e3, #74b9ff);
   --card-bg: #ffffff;
 }
 
-/* Global Reset for Light Mode */
+/* Global Reset */
 [data-theme="light"] body {
   background: var(--bg-dark);
   color: var(--text-dark);
+  font-weight: 400;
 }
 
 /* Typography */
@@ -34,40 +35,41 @@
 [data-theme="light"] h2,
 [data-theme="light"] h3 {
   color: var(--accent-1);
-  text-shadow: 0 2px 4px rgba(108, 92, 231, 0.1);
+  font-weight: 700;
 }
 
 [data-theme="light"] p,
 [data-theme="light"] li {
-  color: #1a1a2c;
+  color: #636e72;
+  line-height: 1.7;
 }
 
-/* Cards & Sections */
+/* Cards (Redesigned from Scratch) */
 [data-theme="light"] .model-card,
 [data-theme="light"] .blog-post,
 [data-theme="light"] .skill-card {
   background: var(--card-bg);
-  border-radius: 16px;
-  border: none;
-  box-shadow: 0 8px 24px rgba(108, 92, 231, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  border: 1px solid rgba(9, 132, 227, 0.1);
+  box-shadow: 0 6px 20px rgba(9, 132, 227, 0.05);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
 }
 
 [data-theme="light"] .model-card:hover,
 [data-theme="light"] .blog-post:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(108, 92, 231, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(9, 132, 227, 0.1);
 }
 
-/* Buttons */
+/* Buttons (New Style) */
 [data-theme="light"] .btn-primary {
-  background: var(--accent-gradient);
+  background: var(--accent-1);
   color: white;
   border: none;
   padding: 0.8rem 2rem;
   border-radius: 8px;
   font-weight: 600;
-  letter-spacing: 1px;
 }
 
 [data-theme="light"] .btn-secondary {
@@ -81,15 +83,15 @@
   color: white;
 }
 
-/* Navigation */
+/* Navigation (Redesigned) */
 [data-theme="light"] .cyber-nav {
-  background: rgba(245, 246, 250, 0.95);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(108, 92, 231, 0.1);
+  border-bottom: 1px solid rgba(9, 132, 227, 0.1);
 }
 
 [data-theme="light"] .nav-link {
-  color: var(--text-dark);
+  color: #2d3436;
   font-weight: 500;
 }
 
@@ -97,25 +99,10 @@
   color: var(--accent-1);
 }
 
-/* Accent Elements */
-[data-theme="light"] .model-category,
-[data-theme="light"] .post-category {
-  background: rgba(108, 92, 231, 0.1);
-  color: var(--accent-1);
-  border: 1px solid rgba(108, 92, 231, 0.2);
-}
-
-[data-theme="light"] .skill-bar {
-  background: rgba(108, 92, 231, 0.1);
-}
-
-[data-theme="light"] .skill-progress {
-  background: var(--accent-gradient);
-}
-
-/* Footer (Keep Dark) */
+/* Footer (Dark as Requested) */
 [data-theme="light"] .site-footer {
   background: rgba(10, 10, 18, 0.95);
+  color: rgba(255, 255, 255, 0.8);
 }
 
   
