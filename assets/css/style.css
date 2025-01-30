@@ -650,7 +650,11 @@ p {
   margin-bottom: 0.5rem;
   color: var(--accent-2);
 }
-
+.post-date {
+  color: var(--accent-2) !important; /* Coral in light theme/Teal in dark */
+  font-weight: 500;
+  font-size: 0.9rem;
+}
 
 .post-content p {
   font-size: 0.9rem;
