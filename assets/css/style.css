@@ -26,3 +26,121 @@
     object-fit: cover;
     border-radius: 8px;
   }
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--text-color);
+  padding: 2rem;
+}
+
+.animated-bg {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(-45deg, #6c5ce7, #a66efa, #ff7675);
+  background-size: 400% 400%;
+  animation: gradient-pulse 15s ease infinite;
+  opacity: 0.1;
+}
+
+@keyframes gradient-pulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Model Grid ===== */
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.model-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.model-card:hover {
+  transform: translateY(-8px);
+}
+
+.model-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.model-info {
+  padding: 1rem;
+}
+
+.model-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--accent);
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* ===== Skill Bars ===== */
+.skill-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  margin: 1.5rem 0;
+}
+
+.skill-bar {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.skill-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
+
+.skill-bar[data-percent="90%"]::after { width: 90%; }
+.skill-bar[data-percent="85%"]::after { width: 85%; }
+.skill-bar[data-percent="75%"]::after { width: 75%; }
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+  .hero { height: 60vh; }
+  
+  .model-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .model-card img {
+    height: 200px;
+  }
+}
