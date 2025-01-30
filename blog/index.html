@@ -2,10 +2,19 @@
 layout: default
 title: Blog
 ---
-{% for post in site.posts %}
-  <article>
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <p>{{ post.date | date: "%b %d, %Y" }}</p>
-    <p>{{ post.excerpt }}</p>
-  </article>
-{% endfor %}
+<section class="blog-section">
+  <h1>Blog</h1>
+  <div class="blog-grid">
+    {% for post in site.posts %}
+      <article class="blog-post">
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <div class="post-meta">
+          <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+          <span class="post-category">{{ post.category }}</span>
+        </div>
+        <p>{{ post.excerpt }}</p>
+        <a href="{{ post.url | relative_url }}" class="btn">Read More</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
