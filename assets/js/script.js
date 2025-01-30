@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
 // Filter Models
 document.addEventListener('DOMContentLoaded', () => {
   const filterButtons = document.querySelectorAll('.filter-btn');
