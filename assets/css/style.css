@@ -116,6 +116,39 @@ p {
   color: var(--accent-1);
 }
 
+/* Hero CTA Buttons */
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-gradient {
+  background: var(--accent-gradient);
+  border: 2px solid transparent;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent-1);
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: rgba(32, 32, 64, 0.3);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
 /* === Hero Section === */
 .hero {
   padding: 8rem 2rem 4rem;
