@@ -98,3 +98,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+// Animate headings on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated-heading');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.hero h1, .featured-models h2, .skills h2').forEach(el => {
+    observer.observe(el);
+  });
+});
