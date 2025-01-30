@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="model-detail">
+  <h1>{{ page.title }}</h1>
+  <div class="gallery">
+    {% for img in page.images %}
+      <img src="{{ img | relative_url }}" loading="lazy">
+    {% endfor %}
+  </div>
+  <div class="specs">
+    <p>Software: {{ page.software | join: ", " }}</p>
+    <p>Polycount: {{ page.polycount }}</p>
+    {{ content }}
+  </div>
+</div>

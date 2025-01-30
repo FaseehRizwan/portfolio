@@ -1,0 +1,22 @@
+title: Your 3D Portfolio
+description: Professional 3D Model Artist & Game Developer
+baseurl: /
+url: https://username.github.io
+
+# Collections
+collections:
+  models:
+    output: true
+    permalink: /models/:path/
+
+# Plugins (for GitHub Pages)
+plugins:
+  - jekyll-feed
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "models"
+    values:
+      layout: "model"

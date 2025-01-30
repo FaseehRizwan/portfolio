@@ -1,0 +1,19 @@
+---
+layout: default
+title: Models
+---
+<div class="model-grid">
+  {% for model in site.models %}
+    <div class="model-card">
+      <a href="{{ model.url | relative_url }}">
+        <img 
+          src="{{ model.images[0] | relative_url }}" 
+          alt="{{ model.title }}" 
+          loading="lazy"
+        >
+        <h3>{{ model.title }}</h3>
+        <p>{{ model.category | capitalize }}</p>
+      </a>
+    </div>
+  {% endfor %}
+</div>
