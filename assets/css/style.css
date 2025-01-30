@@ -1,5 +1,80 @@
 /* === Global Styles === */
 :root {
+
+  :root {
+  /* Dark Mode Colors */
+  --bg-dark: #0a0a12;
+  --text-dark: #e0e0ff;
+  --accent-1: #7b61ff;
+  --accent-2: #00ffd1;
+  --accent-gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  --card-bg-dark: rgba(32, 32, 64, 0.3);
+  --card-bg-light: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] {
+  /* Light Mode Colors */
+  --bg-dark: #f8f9fa;
+  --text-dark: #1a1a2c;
+  --accent-1: #6c5ce7;
+  --accent-2: #00b894;
+  --card-bg-dark: rgba(255, 255, 255, 0.9);
+  --card-bg-light: rgba(32, 32, 64, 0.1);
+}
+
+  /* Light Mode Specific Styles */
+[data-theme="light"] body {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .model-header h1,
+[data-theme="light"] .details-section h2,
+[data-theme="light"] .description-section h2 {
+  color: var(--accent-1);
+}
+
+[data-theme="light"] .model-meta,
+[data-theme="light"] .detail-item p,
+[data-theme="light"] .description-content {
+  color: rgba(26, 26, 44, 0.9);
+}
+
+[data-theme="light"] .details-section,
+[data-theme="light"] .description-section,
+[data-theme="light"] .detail-item {
+  background: var(--card-bg-dark);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .btn-primary {
+  background: var(--accent-gradient);
+  color: white;
+}
+
+[data-theme="light"] .btn-secondary {
+  background: transparent;
+  border: 2px solid var(--accent-1);
+  color: var(--accent-1);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: var(--accent-1);
+  color: white;
+}
+
+[data-theme="light"] .gallery-thumbnails img {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .gallery-thumbnails img:hover {
+  border-color: var(--accent-1);
+}
+
+
+
+
+  
   /* Colors */
   --bg-dark: #0a0a12;
   --bg-light: #f8f9fa;
