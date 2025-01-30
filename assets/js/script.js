@@ -40,3 +40,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Blog Category Filter
+document.addEventListener('DOMContentLoaded', () => {
+  const categoryButtons = document.querySelectorAll('.category-btn');
+  const blogPosts = document.querySelectorAll('.blog-post');
+
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons
+      categoryButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active class to clicked button
+      button.classList.add('active');
+
+      // Filter posts
+      const category = button.dataset.category;
+      blogPosts.forEach(post => {
+        if (category === 'all' || post.dataset.category === category) {
+          post.style.display = 'block';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Blog Search Functionality
+  const searchInput = document.getElementById('search-input');
+  const searchButton = document.getElementById('search-button');
+
+  if (searchInput && searchButton) {
+    searchButton.addEventListener('click', () => {
+      const query = searchInput.value.toLowerCase();
+      blogPosts.forEach(post => {
+        const title = post.querySelector('h2').textContent.toLowerCase();
+        if (title.includes(query)) {
+          post.style.display = 'block';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+    });
+  }
+});
