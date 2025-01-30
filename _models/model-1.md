@@ -1,6 +1,6 @@
 ---
 title: "Sci-Fi Spaceship"
-category: game
+category: vehicles
 software: [Blender, Substance Painter]
 polycount: 12k
 images:
