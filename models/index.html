@@ -1,33 +1,40 @@
 ---
 layout: default
-title: Portfolio
 ---
-<div class="portfolio-header">
-  <h1>Portfolio</h1>
-  <div class="filters">
-    <button data-filter="all">All</button>
-    <button data-filter="props">Props</button>
-    <button data-filter="weapons">Weapons</button>
-    <button data-filter="characters">Characters</button>
-    <button data-filter="vehicles">Vehicles</button>
-    <button data-filter="environments">Environments</button>
-  </div>
-</div>
+<article class="model-detail">
+  <!-- Model Title -->
+  <h1 class="model-title">{{ page.title }}</h1>
 
-<div class="model-grid">
-  {% for model in site.models %}
-    <div class="model-card" data-category="{{ model.category }}">
-      <a href="{{ model.url | relative_url }}">
-        <img 
-          src="{{ model.images[0] | relative_url }}" 
-          alt="{{ model.title }}" 
-          loading="lazy"
-        >
-        <div class="model-info">
-          <h3>{{ model.title }}</h3>
-          <span class="model-category">{{ model.category }}</span>
-        </div>
-      </a>
-    </div>
-  {% endfor %}
-</div>
+  <!-- Model Gallery -->
+  <div class="model-gallery">
+    {% for image in page.images %}
+      <img 
+        src="{{ image | relative_url }}" 
+        alt="{{ page.title }} - Image {{ forloop.index }}" 
+        loading="lazy"
+      >
+    {% endfor %}
+  </div>
+
+  <!-- Model Details -->
+  <div class="model-specs">
+    <h2>Details</h2>
+    <ul>
+      <li><strong>Category:</strong> {{ page.category }}</li>
+      <li><strong>Software:</strong> {{ page.software | join: ", " }}</li>
+      <li><strong>Polycount:</strong> {{ page.polycount }}</li>
+      <li><strong>Textures:</strong> {{ page.textures }}</li>
+    </ul>
+  </div>
+
+  <!-- Model Description -->
+  <div class="model-description">
+    <h2>Overview</h2>
+    {{ content }}
+  </div>
+
+  <!-- Back to Portfolio -->
+  <div class="back-to-portfolio">
+    <a href="{{ '/models/' | relative_url }}" class="btn">Back to Portfolio</a>
+  </div>
+</article>
