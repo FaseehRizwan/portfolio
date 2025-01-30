@@ -30,6 +30,7 @@ body {
   color: var(--text-dark);
   font-family: var(--body-font);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 /* Fix spacing below fixed navigation */
 main {
@@ -386,4 +387,11 @@ p {
 
 .blog-post .btn:hover {
   transform: translateY(-2px);
+}
+
+/* Light Theme */
+body[data-theme="light"] {
+  --bg-dark: #f8f9fa;
+  --text-dark: #1a1a2c;
+  --text-light: #e0e0ff;
 }
