@@ -678,17 +678,17 @@ p {
 }
 @media (max-width: 768px) {
   .blog-grid {
-    grid-template-columns: 1fr;
-    padding: 1rem;
+    grid-template-columns: 1fr !important;
+    padding: 1rem !important;
   }
   .blog-post {
-    margin: 0 1rem;
+    margin: 0 1rem !important;
   }
 }
 
 @media (max-width: 480px) {
   .blog-post {
-    margin: 0 0.5rem;
+    margin: 0 0.5rem !important;
   }
 }
 /* Blog Grid */
