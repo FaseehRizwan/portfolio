@@ -676,7 +676,21 @@ p {
   background: var(--accent-1);
   color: white;
 }
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .blog-post {
+    margin: 0 1rem;
+  }
+}
 
+@media (max-width: 480px) {
+  .blog-post {
+    margin: 0 0.5rem;
+  }
+}
 /* Blog Grid */
 .blog-grid {
   display: grid;
