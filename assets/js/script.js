@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Mobile Menu Toggle
-document.querySelector('.hamburger').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('active');
-});
+document.querySelector('.hamburger-menu').addEventListener('click', function() {
+    document.querySelector('.nav-container').classList.toggle('active');
+  });
 
