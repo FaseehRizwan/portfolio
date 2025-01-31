@@ -608,7 +608,17 @@ p {
   max-width: 1200px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .blog-section {
+    padding: 2rem 1rem !important;
+  }
+}
 
+@media (max-width: 480px) {
+  .blog-section {
+    padding: 1rem 0.5rem !important;
+  }
+}
 .blog-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -676,21 +686,7 @@ p {
   background: var(--accent-1);
   color: white;
 }
-@media (max-width: 768px) {
-  .blog-grid {
-    grid-template-columns: 1fr !important;
-    padding: 1rem !important;
-  }
-  .blog-post {
-    margin: 0 1rem !important;
-  }
-}
 
-@media (max-width: 480px) {
-  .blog-post {
-    margin: 0 0.5rem !important;
-  }
-}
 /* Blog Grid */
 .blog-grid {
   display: grid;
