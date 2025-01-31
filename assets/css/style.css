@@ -7,7 +7,8 @@
   --text-dark: #e0e0ff;
   --accent-1: #7b61ff;
   --accent-2: #00ffd1;
-  --accent-gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  --accent-3: #0716ba;
+  --accent-gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2), var(--accent-3));
   --card-bg-dark: rgba(32, 32, 64, 0.3);
   --card-bg-light: rgba(255, 255, 255, 0.9);
   --container-width: 100%;
