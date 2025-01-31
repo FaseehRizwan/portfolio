@@ -243,6 +243,45 @@ p {
 .theme-toggle:hover {
   color: var(--accent-1);
 }
+/* Add the following CSS for mobile compatibility */
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links on mobile */
+  }
+
+  .nav-container.active .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 60px; /* Adjust based on your header height */
+    right: 1rem;
+    background: rgba(10, 10, 18, 0.95);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .nav-container {
+    padding: 0 0.5rem;
+  }
+}
+
 
 /* Hero CTA Buttons */
 .hero-cta {
