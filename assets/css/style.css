@@ -1,5 +1,7 @@
 /* === Global Styles === */
 :root {
+
+  :root {
   /* Dark Mode Colors */
   --bg-dark: #0a0a12;
   --text-dark: #e0e0ff;
@@ -24,6 +26,16 @@
   --text-light: #e0e0ff;
 }
 
+
+
+
+
+
+  
+
+  
+
+  
 /* Global Reset */
 [data-theme="light"] body {
   background: var(--bg-dark);
@@ -37,18 +49,6 @@
 [data-theme="light"] h3 {
   color: var(--accent-1);
   font-weight: 700;
-}
-
-h1 {
-  font-size: 3rem;
-  line-height: 1.2;
-  background: linear-gradient(135deg, #7b61ff, #00ffd1); /* Gradient colors */
-  -webkit-background-clip: text; /* Clip the background to the text */
-  background-clip: text; /* Clip the background to the text */
-  -webkit-text-fill-color: transparent; /* Make the text fill transparent */
-}
-
-/* Other styles remain unchanged... */
 }
 
 [data-theme="light"] p,
@@ -175,14 +175,6 @@ h1, h2, h3 {
 h1 {
   font-size: 3rem;
   line-height: 1.2;
-  h1 {
-    font-size: 3rem;
-    line-height: 1.2;
-    background: linear-gradient(135deg, #7b61ff, #00ffd1); /* Gradient colors */
-    -webkit-background-clip: text; /* Clip the background to the text */
-    background-clip: text; /* Clip the background to the text */
-    -webkit-text-fill-color: transparent; /* Make the text fill transparent */
-  }
 }
 
 h2 {
@@ -608,17 +600,7 @@ p {
   max-width: 1200px;
   margin: 0 auto;
 }
-@media (max-width: 768px) {
-  .blog-section {
-    padding: 2rem 1rem !important;
-  }
-}
 
-@media (max-width: 480px) {
-  .blog-section {
-    padding: 1rem 0.5rem !important;
-  }
-}
 .blog-header {
   text-align: center;
   margin-bottom: 3rem;
